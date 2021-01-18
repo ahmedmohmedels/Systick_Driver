@@ -1,7 +1,7 @@
 #include "systick_hdr.h"
 
 
-void SYSTICK_INIT(unsigned long initval,unsigned short speed, unsigned short interrupt){
+void SYSTICK_INIT(uint_32 initval,unsigned short speed, unsigned short interrupt){
 	SysTick_CTRL = 0x00;
 	SysTick_LOAD = initval;
 	SysTick_VAL = 0x00;
@@ -13,7 +13,7 @@ void SYSTICK_START(){
 void SYSTICK_STOP(){
 	SysTick_CTRL &= ~0x01;
 }
-unsigned long SYSTICK_VAL(){
+uint_32 SYSTICK_VAL(){
 	return SysTick_VAL & 0x00FFFFFF;
 }
 
