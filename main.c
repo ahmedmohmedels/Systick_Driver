@@ -8,7 +8,7 @@ int main(void){
 	GPIO_INIT(PA,0, O50, O_GP_PP);
 	
 	__disable_irq();
-	SYSTICK_INIT(72000-1, FCLK_8, INT);
+	SYSTICK_INIT(72000-1, FCLK, INT);
 	__enable_irq();
 
 
