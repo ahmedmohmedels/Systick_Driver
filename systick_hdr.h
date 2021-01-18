@@ -12,8 +12,6 @@
 #define INT			1
 
 
-
-
 void SYSTICK_INIT(unsigned long initval,unsigned short speed, unsigned short interrupt);
 void SYSTICK_START();
 void SYSTICK_STOP();
